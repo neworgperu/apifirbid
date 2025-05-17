@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descarga</title>
+</head>
+<body>
+  <h2>Gracias por tu interés en nuestro servicio</h2>
+  <p>Tu descarga comenzará en unos segundos...</p>
+
+  <script>
+    // URL directa del archivo que deseas que se descargue
+    const downloadUrl = "img/Ficha_Tecnica_API_Firbid.pdf";
+
+    // Crear un enlace invisible y simular clic
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = ''; // Esto fuerza la descarga en algunos navegadores
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  </script>
+</body>
+</html>
